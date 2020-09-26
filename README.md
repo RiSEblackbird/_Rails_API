@@ -13,7 +13,7 @@
 
 ### Rails API
 
-- ``$ rails new . --api --database=mysql --skip-bundle``
+- ``$ rails new ./api --api --database=mysql --skip-bundle``
 
 ------
 
