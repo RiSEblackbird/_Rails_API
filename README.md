@@ -47,6 +47,7 @@
 ### ER図 ([別リポジトリからの引用](https://github.com/RiSEblackbird/_TS_Express_MySQL_with_TypeORM_API))
 
 ![for_TS_Express_bigenner_projects-withoutUser(result)](https://user-images.githubusercontent.com/43542677/92310333-48bcb800-efe8-11ea-8ae7-c037b1e888c1.png)
+(この図のうち、外部キー等は今回考えない)
 
 ### モデル、コントローラーの生成
 
@@ -64,9 +65,9 @@
 
 ### リレーションの追加(マイグレーションファイル、モデルクラス)
 
-- ``Keyword`` <-> ``Stamp``
+#### 中間テーブルを介した関連付け
 
-- ``Stamp`` <-> ``Study_log``
+[2.4 has_many :through関連付け - Railsガイド](https://railsguides.jp/association_basics.html#has-many-through%E9%96%A2%E9%80%A3%E4%BB%98%E3%81%91)
 
 - ``$ rails db:create``
 
