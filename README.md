@@ -27,9 +27,7 @@
 
 ### Linterの導入([Rubocop](https://github.com/rubocop-hq/rubocop))
 
-- ``$ gem install rubocop``
-
-````
+- [Installation](https://github.com/rubocop-hq/rubocop#installation)項を参照
 
 ### Rails API
 
@@ -78,7 +76,45 @@
 - (必要な場合はDB設定)
 
 - ``$ rails db:create``
-- ``$ rails db:migrate RAILS_ENV=development``
+- ``$ rails db:migrate``
+
+### ルーティングの設定
+
+~~~rb
+Rails.application.routes.draw do
+  namespace 'api' do
+    namespace 'v1' do
+      resources :keywords
+      resources :stamps
+      resources :study_logs
+    end
+  end
+end
+~~~
+
+~~~a
+# 以下は要所の抜粋
+$ rails routes
+Prefix Verb              URI Pattern                           Controller#Action
+  api_v1_keywords GET    /api/v1/keywords(.:format)            api/v1/keywords#index
+                  POST   /api/v1/keywords(.:format)            api/v1/keywords#create
+  api_v1_keyword  GET    /api/v1/keywords/:id(.:format)        api/v1/keywords#show
+                  PATCH  /api/v1/keywords/:id(.:format)        api/v1/keywords#update
+                  PUT    /api/v1/keywords/:id(.:format)        api/v1/keywords#update
+                  DELETE /api/v1/keywords/:id(.:format)        api/v1/keywords#destroy
+    api_v1_stamps GET    /api/v1/stamps(.:format)              api/v1/stamps#index
+                  POST   /api/v1/stamps(.:format)              api/v1/stamps#create
+    api_v1_stamp  GET    /api/v1/stamps/:id(.:format)          api/v1/stamps#show
+                  PATCH  /api/v1/stamps/:id(.:format)          api/v1/stamps#update
+                  PUT    /api/v1/stamps/:id(.:format)          api/v1/stamps#update
+                  DELETE /api/v1/stamps/:id(.:format)          api/v1/stamps#destroy
+api_v1_study_logs GET    /api/v1/study_logs(.:format)          api/v1/study_logs#index
+                  POST   /api/v1/study_logs(.:format)          api/v1/study_logs#create
+api_v1_study_log  GET    /api/v1/study_logs/:id(.:format)      api/v1/study_logs#show
+                  PATCH  /api/v1/study_logs/:id(.:format)      api/v1/study_logs#update
+                  PUT    /api/v1/study_logs/:id(.:format)      api/v1/study_logs#update
+                  DELETE /api/v1/study_logs/:id(.:format)      api/v1/study_logs#destroy
+~~~
 
 ## Tips
 
