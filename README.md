@@ -48,10 +48,10 @@
 
 - ``$ bundle install``
 
-### ER図 ([別リポジトリからの引用](https://github.com/RiSEblackbird/_TS_Express_MySQL_with_TypeORM_API))
+### ER図のベース ([別リポジトリからの引用](https://github.com/RiSEblackbird/_TS_Express_MySQL_with_TypeORM_API))
 
 ![for_TS_Express_bigenner_projects-withoutUser(result)](https://user-images.githubusercontent.com/43542677/92310333-48bcb800-efe8-11ea-8ae7-c037b1e888c1.png)
-(この図のうち、外部キー等は今回考えない)
+(この図に対して、外部キー等の整合は今回考えない)
 
 ### モデル、コントローラーの生成
 
@@ -77,6 +77,43 @@
 
 - ``$ rails db:create``
 - ``$ rails db:migrate``
+
+~~~a
+mysql> describe keywords;
++------------+--------------+------+-----+---------+----------------+
+| Field      | Type         | Null | Key | Default | Extra          |
++------------+--------------+------+-----+---------+----------------+
+| id         | bigint(20)   | NO   | PRI | NULL    | auto_increment |
+| word       | varchar(255) | NO   |     | NULL    |                |
+| memo       | text         | YES  |     | NULL    |                |
+| created_at | datetime(6)  | NO   |     | NULL    |                |
+| updated_at | datetime(6)  | NO   |     | NULL    |                |
++------------+--------------+------+-----+---------+----------------+
+5 rows in set (0.01 sec)
+
+mysql> describe stamps;
++--------------+-------------+------+-----+---------+----------------+
+| Field        | Type        | Null | Key | Default | Extra          |
++--------------+-------------+------+-----+---------+----------------+
+| id           | bigint(20)  | NO   | PRI | NULL    | auto_increment |
+| keyword_id   | bigint(20)  | YES  | MUL | NULL    |                |
+| study_log_id | bigint(20)  | YES  | MUL | NULL    |                |
+| created_at   | datetime(6) | NO   |     | NULL    |                |
+| updated_at   | datetime(6) | NO   |     | NULL    |                |
++--------------+-------------+------+-----+---------+----------------+
+5 rows in set (0.00 sec)
+
+mysql> describe study_logs;
++------------+-------------+------+-----+---------+----------------+
+| Field      | Type        | Null | Key | Default | Extra          |
++------------+-------------+------+-----+---------+----------------+
+| id         | bigint(20)  | NO   | PRI | NULL    | auto_increment |
+| body       | text        | NO   |     | NULL    |                |
+| created_at | datetime(6) | NO   |     | NULL    |                |
+| updated_at | datetime(6) | NO   |     | NULL    |                |
++------------+-------------+------+-----+---------+----------------+
+4 rows in set (0.00 sec)
+~~~
 
 ### ルーティングの設定
 
