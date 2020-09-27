@@ -25,6 +25,12 @@
   - ``cd ..``
 - ``.gitignore``を設定
 
+### Linterの導入([Rubocop](https://github.com/rubocop-hq/rubocop))
+
+- ``$ gem install rubocop``
+
+````
+
 ### Rails API
 
 - アプリケーションの準備
