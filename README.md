@@ -69,6 +69,8 @@
 
 [2.4 has_many :through関連付け - Railsガイド](https://railsguides.jp/association_basics.html#has-many-through%E9%96%A2%E9%80%A3%E4%BB%98%E3%81%91)
 
+- (必要な場合はDB設定)
+
 - ``$ rails db:create``
 
 ## Tips
