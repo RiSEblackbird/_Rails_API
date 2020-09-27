@@ -65,3 +65,25 @@
 - Rails による API 専用アプリケーション
   - <https://railsguides.jp/api_app.html>
 - [Railsで超簡単API - Qiita](https://qiita.com/k-penguin-sato/items/adba7a1a1ecc3582a9c9)
+
+### i18n 1.1 について
+
+- 最初の``$ bundle install``の際に下記メッセージが表示された
+- 今回は多言語対応を実装しないが、メッセージの指示に従って変更しておく
+  
+  ~~~a
+  HEADS UP! i18n 1.1 changed fallbacks to exclude default locale.
+  But that may break your application.
+
+  If you are upgrading your Rails application from an older version of Rails:
+
+  Please check your Rails app for 'config.i18n.fallbacks = true'.
+  If you're using I18n (>= 1.1.0) and Rails (< 5.2.2), this should be
+  'config.i18n.fallbacks = [I18n.default_locale]'.
+  If not, fallbacks will be broken in your app by I18n 1.1.x.
+
+  If you are starting a NEW Rails application, you can ignore this notice.
+
+  For more info see:
+  https://github.com/svenfuchs/i18n/releases/tag/v1.1.0
+  ~~~
