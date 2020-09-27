@@ -1,0 +1,2 @@
+class StudyLogController < ApplicationController
+end
