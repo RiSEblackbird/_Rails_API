@@ -55,12 +55,12 @@
   - ``$ rails g controller keyword``
 
 - Stampモデル
-  - ``$ rails g model stamp keywordId:integer studyLogId:integer``
+  - ``$ rails g model stamp keyword_id:integer study_log_id:integer``
   - ``$ rails g controller stamp``
 
 - Study_logモデル
   - ``$ rails g model studyLog body:text``
-  - ``$ rails g controller studyLog``
+  - ``$ rails g controller study_log``
 
 ### リレーションの追加(マイグレーションファイル、モデルクラス)
 
