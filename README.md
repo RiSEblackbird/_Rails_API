@@ -72,6 +72,7 @@
 - (必要な場合はDB設定)
 
 - ``$ rails db:create``
+- ``$ rails db:migrate RAILS_ENV=development``
 
 ## Tips
 
