@@ -1,5 +1,7 @@
 # _Rails_API_
 
+(This repository is my own self-study document )
+
 ## リポジトリの目的
 
 - ``Rails API``の基礎学習
@@ -31,6 +33,7 @@
         - ``--database=mysql`` : DBにMySQLを指定
         - ``--skip-bundle`` : 標準Gemのインストールをスキップする
           - [Rubyアソシエーション: アプリケーションの土台作成](https://www.ruby.or.jp/ja/tech/development/web_application/tutorial/step1.html)
+- ``$ bundle install``
 
 ### ER図 ([別リポジトリからの引用](https://github.com/RiSEblackbird/_TS_Express_MySQL_with_TypeORM_API))
 
@@ -43,12 +46,12 @@
   - ``$ rails g controller keyword``
 
 - Stampモデル
-  - ``$ rails g model stamp keyword_id:integer study_log_id:integer``
+  - ``$ rails g model stamp keywordId:integer studyLogId:integer``
   - ``$ rails g controller stamp``
 
 - Study_logモデル
-  - ``$ rails g model study_log body:text``
-  - ``$ rails g controller study_log``
+  - ``$ rails g model studyLog body:text``
+  - ``$ rails g controller studyLog``
 
 ### リレーションの追加(マイグレーションファイル、モデルクラス)
 
@@ -87,3 +90,12 @@
   For more info see:
   https://github.com/svenfuchs/i18n/releases/tag/v1.1.0
   ~~~
+
+### 関連付け
+
+- [Active Record の関連付け - Railsガイド](https://railsguides.jp/association_basics.html)
+
+### 外部キー
+
+- [Active Record マイグレーション - Railsガイド](https://railsguides.jp/active_record_migrations.html)
+  - [3.6 外部キー](https://railsguides.jp/active_record_migrations.html#%E5%A4%96%E9%83%A8%E3%82%AD%E3%83%BC)
