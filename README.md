@@ -36,6 +36,12 @@
         - ``--database=mysql`` : DBにMySQLを指定
         - ``--skip-bundle`` : 標準Gemのインストールをスキップする
           - [Rubyアソシエーション: アプリケーションの土台作成](https://www.ruby.or.jp/ja/tech/development/web_application/tutorial/step1.html)
+
+- テストフレームワーク``RSpec``の適用
+  - 本リポジトリではデフォルトを``Minitest``から``RSpec``に変更する最低限の手続きのみ
+  - ``rspec-rails``, ``capybara``のみ追加
+  - ``api/config/application.rb``の設定
+
 - ``$ bundle install``
 
 ### ER図 ([別リポジトリからの引用](https://github.com/RiSEblackbird/_TS_Express_MySQL_with_TypeORM_API))
