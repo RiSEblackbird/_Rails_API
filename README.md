@@ -153,6 +153,13 @@ api_v1_study_log  GET    /api/v1/study_logs/:id(.:format)      api/v1/study_logs
                   DELETE /api/v1/study_logs/:id(.:format)      api/v1/study_logs#destroy
 ~~~
 
+### コントローラーの整備
+
+- コントローラーのディレクトリ階層をルーティングの階層に合わせる
+  ~~~a
+  controller > api > v1 > ***_controller.rb
+  ~~~
+
 ## Tips
 
 ### Rails APIについて
