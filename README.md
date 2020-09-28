@@ -158,6 +158,7 @@ api_v1_study_log  GET    /api/v1/study_logs/:id(.:format)      api/v1/study_logs
 - コントローラーのディレクトリ階層をルーティングの階層に合わせる
   ~~~a
   controller > api > v1 > ***_controller.rb
+  　注意 : ルートに紐づくコントローラーのみを配下におくこと(controller > application_controller.rb)
   ~~~
 
 ## Tips
