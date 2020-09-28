@@ -57,15 +57,15 @@
 
 - Keywordモデル
   - ``$ rails g model keyword word:string memo:text``
-  - ``$ rails g controller keyword``
+  - ``$ rails g controller keywords``
 
 - Stampモデル
   - ``$ rails g model stamp keyword_id:integer study_log_id:integer``
-  - ``$ rails g controller stamp``
+  - ``$ rails g controller stamps``
 
 - Study_logモデル
   - ``$ rails g model studyLog body:text``
-  - ``$ rails g controller study_log``
+  - ``$ rails g controller study_logs``
 
 ### リレーションの追加(マイグレーションファイル、モデルクラス)
 
